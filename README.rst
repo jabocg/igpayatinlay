@@ -1,4 +1,4 @@
 Igpay Atinlay
 +++++++++++++
 
-The most _useless_ text modifying Python module!
+The most *useless* text modifying Python module!
