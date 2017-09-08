@@ -67,7 +67,11 @@ class IgpayAtinlayAsephray:
                 if len(pre) > 0 and pre[0] in _CAPITALS:
                     pre = pre.lower()
                     rest = rest[0].upper() + rest[1:]
-                split_words[j] = '{}{}ay{}'.format(rest, pre, punc)
+                if len(pre) == 0 and rest[-1] in _VOWELS:
+                    suffix = 'say'
+                else:
+                    suffix = 'ay'
+                split_words[j] = '{}{}{}{}'.format(rest, pre, suffix, punc)
             self.pig_words.append(' '.join(split_words))
         self.pig_phrase = ' '.join(self.pig_words)
 
